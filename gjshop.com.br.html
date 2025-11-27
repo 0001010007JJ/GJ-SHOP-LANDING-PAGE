@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GJ SHOP — Produtos Domésticos Online</title>
+  <meta name="description" content="GJ SHOP — Produtos domésticos com envio por marketplaces. Qualidade, preço e entrega rápida." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --yellow: #FFC000;
+      --dark: #3A3838;
+      --bg: #ffffff;
+      --muted: #6b6a6a;
+      --radius: 14px;
+      --maxw: 1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,#fff 0%, #faf9f8 100%); color:var(--dark); -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; line-height:1.45; font-size:16px;
+    }
+
+    /* Container */
+    .container{max-width:var(--maxw); margin:0 auto; padding:30px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-wrap{width:56px;height:56px;display:grid;place-items:center;background:var(--yellow);border-radius:12px;box-shadow:0 6px 18px rgba(58,56,56,0.08)}
+    .logo-mark{font-weight:800;color:var(--dark);font-size:20px;letter-spacing:0.5px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--dark);text-decoration:none;font-weight:600}
+    .cta{background:var(--dark);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{display:flex;gap:40px;padding:28px 0;align-items:center}
+    .hero-left{flex:1}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(255,192,0,0.12);color:var(--dark);font-weight:600;margin-bottom:18px}
+    h1{font-size:clamp(26px,4vw,40px);margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 20px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:var(--yellow);border:none;padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn-outline{background:transparent;border:1.5px solid var(--dark);padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer}
+
+    .hero-right{flex:1;display:flex;justify-content:center}
+    .mockup{width:100%;max-width:420px;border-radius:18px;padding:22px;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 12px 30px rgba(58,56,56,0.06)}
+    .product-card{display:flex;gap:14px;align-items:center}
+    .product-thumb{width:78px;height:78px;border-radius:10px;background:var(--yellow);display:grid;place-items:center;color:var(--dark);font-weight:800}
+    .product-info{flex:1}
+    .price{font-weight:800}
+
+    /* Features */
+    .grid{display:grid;gap:18px;margin:28px 0}
+    .features{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .feature{background:#fff;border-radius:12px;padding:18px;border:1px solid rgba(58,56,56,0.06);box-shadow:0 6px 18px rgba(58,56,56,0.03)}
+    .feature h3{margin:0 0 8px;font-size:18px}
+    .feature p{margin:0;color:var(--muted)}
+
+    /* Products */
+    .products{margin:22px 0}
+    .cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+    .card{background:#fff;border-radius:12px;padding:12px;border:1px solid rgba(58,56,56,0.04);text-align:left}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .card h4{margin:10px 0 6px}
+    .card .meta{color:var(--muted);font-size:14px}
+
+    /* CTA strip */
+    .cta-strip{display:flex;align-items:center;justify-content:space-between;padding:18px;border-radius:12px;background:linear-gradient(90deg,var(--dark),#4a4848);color:#fff;margin:28px 0}
+    .cta-strip .left{display:flex;gap:12px;align-items:center}
+    .marketplaces{display:flex;gap:10px}
+    .badge{background:rgba(255,255,255,0.08);padding:6px 10px;border-radius:8px;font-weight:700}
+
+    /* Footer */
+    footer{padding:24px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(58,56,56,0.04)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      header{padding:12px 0}
+      .hero{flex-direction:column-reverse}
+      .hero-right{margin-bottom:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo-wrap" aria-hidden="true">
+          <div class="logo-mark">GJ</div>
+        </div>
+        <div>
+          <div style="font-weight:800; color:var(--dark)">GJ SHOP</div>
+          <div style="font-size:12px;color:var(--muted)">Produtos domésticos — Marketplaces</div>
+        </div>
+      </div>
+
+      <nav aria-label="Menu principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a class="cta" href="#comprar">Comprar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-left">
+          <span class="eyebrow">Entrega rápida • Marketplaces</span>
+          <h1 id="hero-title">Tudo para sua casa — qualidade e preço justo</h1>
+          <p class="lead">Na GJ SHOP você encontra eletrodomésticos, utilidades e itens para deixar seu dia a dia mais prático. Integramos os principais marketplaces para facilitar sua compra.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="scrollToSection('produtos')">Ver produtos</button>
+            <button class="btn-outline" onclick="openContact()">Fale conosco</button>
+          </div>
+
+          <div style="margin-top:18px;color:var(--muted);font-size:14px">Vendido e entregue por GJ SHOP — Atendimento 100% online</div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="mockup">
+            <div class="product-card">
+              <div class="product-thumb">HJ</div>
+              <div class="product-info">
+                <div style="font-weight:700">Conjunto de copos — 6 un.</div>
+                <div class="meta">A partir de <span class="price">R$ 49,90</span></div>
+              </div>
+            </div>
+            <div style="height:12px"></div>
+            <div class="product-card">
+              <div class="product-thumb">KT</div>
+              <div class="product-info">
+                <div style="font-weight:700">Organizador de cozinha</div>
+                <div class="meta">Envio rápido • 30 dias para trocar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid features" aria-label="Diferenciais">
+        <div class="feature">
+          <h3>Entrega rápida</h3>
+          <p>Integração com os principais marketplaces para despacho agilizado e rastreio em tempo real.</p>
+        </div>
+        <div class="feature">
+          <h3>Produtos selecionados</h3>
+          <p>Curadoria com foco em qualidade, durabilidade e custo-benefício para o lar.</p>
+        </div>
+        <div class="feature">
+          <h3>Atendimento digital</h3>
+          <p>Suporte via chat e e‑mail, com resposta rápida e política de troca clara.</p>
+        </div>
+      </section>
+
+      <section id="produtos" class="products" aria-labelledby="produtos-title">
+        <h2 id="produtos-title">Produtos em destaque</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='800' height='600' fill='%23FFC000'/><text x='50' y='330' font-size='40' font-family='Inter' fill='%233A3838'>Panela Antiaderente</text></svg>" alt="Panela antiaderente"/>
+            <h4>Panela antiaderente 20cm</h4>
+            <div class="meta">R$ 79,90 • Frete por marketplace</div>
+          </article>
+          <article class="card">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='800' height='600' fill='%23FFC000'/><text x='50' y='330' font-size='40' font-family='Inter' fill='%233A3838'>Jogo de Talheres</text></svg>" alt="Jogo de talheres"/>
+            <h4>Jogo de talheres 24 peças</h4>
+            <div class="meta">R$ 59,90 • Pronto para envio</div>
+          </article>
+          <article class="card">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='800' height='600' fill='%23FFC000'/><text x='50' y='330' font-size='40' font-family='Inter' fill='%233A3838'>Organizador</text></svg>" alt="Organizador"/>
+            <h4>Organizador multiuso</h4>
+            <div class="meta">R$ 29,90 • Venda em marketplace</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-strip" role="region" aria-label="Comprar agora">
+        <div class="left">
+          <div style="font-weight:800">Comece a vender com a GJ SHOP</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.9)">Integração com marketplaces e logística otimizada</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="marketplaces" aria-hidden="true">
+            <div class="badge">Marketplace A</div>
+            <div class="badge">Marketplace B</div>
+            <div class="badge">Marketplace C</div>
+          </div>
+          <button class="btn-primary" onclick="scrollToSection('contato')">Quero anunciar</button>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <h2>Sobre a GJ SHOP</h2>
+        <p style="color:var(--muted);max-width:760px">A GJ SHOP é especializada em seleção e distribuição de produtos domésticos através de marketplaces online. Trabalhamos com curadoria de fornecedores, fotos profissionais e logística integrada para garantir uma experiência de compra tranquila ao cliente final.</p>
+      </section>
+
+      <section id="contato" style="margin-top:18px">
+        <h2>Fale conosco</h2>
+        <form onsubmit="submitForm(event)" style="max-width:520px;background:#fff;padding:16px;border-radius:12px;border:1px solid rgba(58,56,56,0.04)">
+          <label style="display:block;margin-bottom:8px">Nome <span style="color:var(--muted);font-size:13px">(obrigatório)</span>
+            <input required name="name" type="text" style="width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(58,56,56,0.08)" />
+          </label>
+          <label style="display:block;margin-bottom:8px">E-mail
+            <input required name="email" type="email" style="width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(58,56,56,0.08)" />
+          </label>
+          <label style="display:block;margin-bottom:8px">Mensagem
+            <textarea required name="message" rows="4" style="width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(58,56,56,0.08)"></textarea>
+          </label>
+          <div style="display:flex;gap:12px;margin-top:8px">
+            <button class="btn-primary" type="submit">Enviar</button>
+            <button type="button" class="btn-outline" onclick="resetForm(this)">Limpar</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <div style="font-weight:700;color:var(--dark)">GJ SHOP</div>
+          <div>© <span id="year"></span> GJ SHOP. Todos os direitos reservados.</div>
+        </div>
+        <div style="color:var(--muted);font-size:13px">Endereço de atendimento • CNPJ • Política de privacidade</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      if(!el) return window.scrollTo({top:0,behavior:'smooth'});
+      el.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    function openContact(){
+      scrollToSection('contato');
+      const f = document.querySelector('#contato form input[name="name"]');
+      if(f) f.focus();
+    }
+
+    function submitForm(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      // Simula envio: integrar com backend ou Zapier/Marketplace via API
+      alert('Mensagem enviada! Responderemos em até 48h.\n(Exemplo: integre o formulário com seu sistema de atendimento)');
+      e.target.reset();
+    }
+
+    function resetForm(btn){
+      const form = btn.closest('form');
+      if(form) form.reset();
+    }
+  </script>
+</body>
+</html>
